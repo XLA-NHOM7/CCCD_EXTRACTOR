@@ -1,0 +1,13 @@
+aiosqlite
+databases
+fastapi
+Jinja2
+pre-commit
+pylibsrtp
+python-multipart
+shapely==1.7.1
+uvicorn==0.17.6 
+vietocr
+yolov5
+
+# pip install -r requirements.txt

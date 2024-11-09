@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lịch sử Trích xuất CCCD</title>
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link href="{{ url_for('static', path='css/styles.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">
+                    <div class="logo-name">MENU</div>
+                </div>
+                <i class='bx bx-menu' id="menu-btn"></i>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <i class='bx bx-search-alt-2'></i>
+                    <input type="text" placeholder="Search here...">
+                </li>
+                <li>
+                    <a href="home">
+                        <i class='bx bx-home'></i>
+                        <span class="links-name">Trang chủ</span>
+                    </a>
+                    <span class="tooltip">Trang chủ</span>
+                </li>
+                <li>
+                    <a href="extract.html">
+                        <i class='bx bx-id-card'></i>
+                        <span class="links-name">Trích xuất CCCD</span>
+                    </a>
+                    <span class="tooltip">Trích xuất CCCD</span>
+                </li>
+                <li>
+                    <a href="history.html">
+                        <i class='bx bx-history'></i>
+                        <span class="links-name">Lịch sử CCCD</span>
+                    </a>
+                    <span class="tooltip">Lịch sử CCCD</span>
+                </li>
+            </ul>
+        </div>
+        <div class="app">
+            <div class="logo">
+                <div class="img_cs">
+                    <img src="static/assets/logo/vaa_logo.png" alt="cs.png" />
+                </div>
+                <h1>Ứng dụng trích xuất thông tin từ Căn Cước Công Dân</h1>
+                <h4>@Nhom7</h4>
+            </div>
+
+            <div class="main">
+                <div class="container">
+                    <h3>Danh sách CCCD đã trích xuất:</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Họ và tên</th>
+                                <th>Ngày sinh</th>
+                                <th>Ngày trích xuất</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>01/01/1990</td>
+                                <td>20/10/2024</td>
+                                <td>
+                                    <a href="view.html?id=1">Xem</a>
+                                    <a href="edit.html?id=1">Sửa</a>
+                                    <button onclick="deleteEntry(1)">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Trần Thị B</td>
+                                <td>02/02/1992</td>
+                                <td>19/10/2024</td>
+                                <td>
+                                    <a href="view.html?id=2">Xem</a>
+                                    <a href="edit.html?id=2">Sửa</a>
+                                    <button onclick="deleteEntry(2)">Xóa</button>
+                                </td>
+                            </tr>
+                            <!-- Thêm các hàng khác ở đây -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function deleteEntry(id) {
+                if (confirm("Bạn có chắc chắn muốn xóa mục này?")) {
+                    // Xử lý xóa mục ở đây (có thể gọi API để xóa)
+                    alert("Đã xóa mục có ID: " + id);
+                    // Cập nhật lại danh sách sau khi xóa
+                }
+            }
+        </script>
+        <script src="{{ url_for('static', path='js/script.js') }}"></script>
+    </body>
+</html>

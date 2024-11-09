@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', path='css/home.css') }}" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+<div class="navbar">
+    <div class="nav-list">
+      <a href="home" class="nav-link">Home</a>
+      <a href="id_card" class="nav-link">ID Card Extractor</a>
+    </div>
+  </div>
+      <div class="cover">
+        <img src="static/assets/homepage/background_AI.jpg" alt="" id="bg_img">
+      </div>
+      <div class="overlay"></div>
+    <div class="welcome">
+        <h1 class="w3-margin w3-jumbo">Chào mừng đến với Nhóm 7 </h1>
+    </div>
+  <script src="{{ url_for('static', path='js/home.js') }}"></script>
+</body>
+</html>
